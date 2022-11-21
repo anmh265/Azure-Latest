@@ -52,6 +52,12 @@ body{
     width: 32px;
     transform: translateX(-3px);
 }
+.mobile-nav button {
+    height: 20px;
+    width: 20px;
+    border: none;
+    transform: translate(-27px, 3px);
+}
 .mobile-nav button img{
     width: 100%;
     height: 100%;
@@ -178,6 +184,7 @@ body{
     font-weight: 600;
     color: #0062ad;
     line-height: 1.3;
+    letter-spacing: 0.04ch;
 }
 .multicloud-cards-top p a{
     line-height: 1.2;
@@ -185,10 +192,166 @@ body{
 .multicloud-cards-desktop{
     display: none;
 }
+.overview{
+    text-align: center;
+    margin-top: 12%;
+    padding: 24px 39px;
+    font-family: font-roman;
+    margin-inline: auto;
+}
+.overview .new{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1a1a1f;
+    margin-bottom: 25px;
+    letter-spacing: 0.04ch;
+}
+.overview a{
+    text-decoration: none;
+    padding: 11px 16px;
+    border: 1px solid #0078d4;
+    color: #0062ad;
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04ch;
+}
+.azure-products-bg{
+    background-color: #f8f9fa;
+}
+.azure-products{
+    padding-top: 60px;
+    max-width: 1310px;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+.azure-products h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: font-roman;
+    text-align: center;
+    color: #1a1a1f;
+    letter-spacing: 0.04ch;
+    margin-bottom: 10%;
+    width: 100%;
+}
+.product-cards-button{
+    margin-bottom: 12px;
+    padding: 12px 24px 12px 12px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
+    background-color: white;
+    border-radius: 4px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+.product-cards-button:first-child{
+    margin-top: 10%;
+}
+.product-cards-button button{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: font-roman;
+    font-weight: 600;
+    color: #1a1a1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-cards-button button::after{
+    content: '\f078';
+    font: var(--fa-font-solid);
+}
+.up-button button::after{
+    transform: rotate(-180deg);
+}
+.product-grid-cards{
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    padding: 12px 0;
+}
+.product-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
+    background-color: white;
+    border-radius: 4px;
+}
+.product-card img{
+    width: 36px;
+    height: 36px;align-self: center;
+}
+.product-card-top p{
+    font-size: 14px;
+    color: #4c4c51;
+    margin: 12px 0;
+    line-height: 1.5;
+}
+.product-card-bottom a{
+    text-decoration: none;
+    color: #0062ad;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+.see-products{
+    margin-top: 10%;
+    text-align: center;
+    width: 100%;
+}
+.see-products a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+.see-products a::after{
+    content: url('./Assets/right-arrow.svg');
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    bottom: 1px;
+    margin-left: 5px;
+}
+.mobile-screenshot{
+    margin-top: 10%;
+    margin-inline: 24px;
+    padding-bottom: 60px;
+}
+.mobile-screenshot img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: black;
+    padding: 3%;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.14);
+}
 
 @media (min-width:375px){
     .multicloud-header h2{
         letter-spacing: 0.02ch;
+    }
+}
+@media (min-width:540px){
+    .overview{
+        margin-top: 11%;
+    }
+    .overview a{
+        width: 30%;
+    }
+    .azure-products h2{
+        margin-bottom: 48px;
     }
 }
 
@@ -359,7 +522,29 @@ body{
         height: 100%;
         object-fit: cover;
     }
+    .overview{
+        width: 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 24px 15px;
+        margin-top: 48px;
+    }
+    .overview .new{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 36px;
+        width: 20%;
+        max-width: 100%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .overview a{
+        width: 40%;
+    }
 }
+
 @media (min-width:769px){
     .innovate{
         text-align: left;
@@ -390,6 +575,12 @@ body{
     }
     .innovate{
         width: 50%;
+    }
+}
+
+@media (min-width:1075px){
+    .overview .new{
+        width: 27%;
     }
 }
 
@@ -483,10 +674,19 @@ body{
     .nav-menu li:nth-child(4){
         width: 26%;
     }
+    .overview{
+        justify-content: center;
+    }
 }
 
 @media (min-width:1280px){
     .innovate{
         padding: 72px 15px 280px 15px;
+    }
+}
+
+@media (min-width:1844px){
+    .overview a{
+        width: 35%;
     }
 }
