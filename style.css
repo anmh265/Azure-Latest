@@ -21,7 +21,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 25px 20px ;
+    padding: 18px 25px 16px ;
 }
 .header .menu{
     display: flex;
@@ -52,18 +52,6 @@ body{
     width: 32px;
     transform: translateX(-3px);
 }
-/* .mobile-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-.mobile-nav button{
-    height: 20px;
-    width: 20px;
-    border: none;
-    background-color: transparent;
-    transform: translate(-26px, 3px);
-}
 .mobile-nav button img{
     width: 100%;
     height: 100%;
@@ -87,9 +75,125 @@ body{
 .input-search, .nav-menu{
     display: none;
 }
+.innovate-bg{
+    background-image: url('/Assets/december-hero-mobile.png');
+    background-position: center;
+    background-size: cover;
+}
+.innovate{
+    padding: 60px 15px;
+    text-align: center;
+}
+.innovate h1{
+    font-size: 54px;
+    color: #1a1a1f;
+    line-height: 1.1;
+    font-family: font-roman;
+    font-weight: 600;
+    letter-spacing: 0.04ch;
+}
+.innovate p{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.innovate-buttons{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.innovate-buttons button{
+    margin-top: 12px;
+    width: 85%;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: font-roman;
+    letter-spacing: 0.04ch;
+    border-radius: 4px;
+}
+.innovate-buttons .blue{
+    background-color: #0078d4;
+    border: 1px solid #0078d4;
+    color: white;
+    padding: 10px 16px;
+}
+.innovate-buttons .free{
+    border: 1px solid black;
+    padding: 5px 20px 8px;
+}
+.multicloud{
+    padding: 60px 0;
+    max-width: 1310px;
+    margin-inline: auto;
+}
+.multicloud-header{
+    color: #1a1a1f;
+    font-family: font-roman;
+    width: 100%;
+    padding-inline: 15px;
+}
+.multicloud-header h2{
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.04ch;
+    text-align: center;
+    width: 100%;
+}
+.multicloud-cards{
+    margin-top: 10%;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 24px;
+}
+.multicloud-cards .flex-card{
+    display: flex;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
+    position: relative;
+    border-radius: 6px;
+}
+.flex-card-img{
+    width: 68px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.flex-card-img img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+.upgrade-img img, .devbox-img img{
+    height: 100%;
+}
+.flex-card p{
+    padding: 24px 24px 24px 80px;
+    line-height: 1.3;
+}
+.flex-card p a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: font-roman;
+    font-weight: 600;
+    color: #0062ad;
+    line-height: 1.3;
+}
+.multicloud-cards-top p a{
+    line-height: 1.2;
+}
+.multicloud-cards-desktop{
+    display: none;
+}
+
+@media (min-width:375px){
+    .multicloud-header h2{
+        letter-spacing: 0.02ch;
+    }
+}
 
 @media (min-width:768px){
-    .menu, .logo, .mobile-nav{
+    .menu, .logo, .mobile-nav, .input-search-container{
         display: none !important;
     }
     .header{
@@ -149,13 +253,14 @@ body{
     .header-right-search{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         gap: 40px;
     }
     .header-right-search img{
         height: 17px;
         width: 17px;
-        transform: rotateY(-180deg) translateY(-1px);
+        transform: rotateY(-180deg);
+        transform-origin: center;
     }
     .header-left-nav{
         display: flex;
@@ -178,6 +283,114 @@ body{
         font-family: font-roman;
         transform: translateX(7px);
     }
+    .innovate p{
+        margin-top: 12px;
+    }
+    .innovate-buttons{
+        margin-top: 36px;
+    }
+    .multicloud-cards{
+        display: none;
+    }
+    .multicloud-cards-desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 30px;
+        row-gap: 24px;
+        margin-top: 36px;
+    }
+    .multicloud-cards-desktop >*{
+        box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
+        border-radius: 4px;
+    }
+    .multicloud-cards-webtop-text{
+        grid-row: 1/span 2;
+        background-image: url('./Assets/ez-optimize-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 24px;
+    }
+    .multicloud-cards-webtop-pos{
+        position: absolute;
+        bottom: 7%;
+    }
+    .multicloud-cards-webtop-pos h2, p{
+        text-align: left;
+    }
+    .multicloud-cards-webtop-pos h2{
+        font-size: 20px;
+        color: #0078d4;
+        font-family: font-roman;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+    .multicloud-cards-webtop-pos p{
+        font-size: 16px;
+        color: #1a1a1f;
+        line-height: 1.5;
+    }
+    .net-desktop-text h2, .devbox-desktop-text h2{
+        text-align: left;
+        color: #0078d4;
+    }
+    .net-desktop-text{
+        padding-left: 12px;
+    }
+    .net-desktop-text p, .devbox-desktop-text p{
+        margin: 12px 0;
+        line-height: 1.5;
+        color: #4c4c51;
+    }
+    .grid-card{
+        position: relative;
+        padding: 24px 24px 24px 156px;
+    }
+    .grid-card-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 119px;
+    }
+    .grid-card-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media (min-width:769px){
+    .innovate{
+        text-align: left;
+        width: 75%;
+    }
+    .innovate-buttons{
+        flex-direction: row;
+    }
+    .innovate-buttons button{
+        width: auto;
+        line-height: 1.5;
+    }
+    .innovate-buttons .blue{
+        margin-top: 12px;
+        margin-right: 24px;
+    }
+}
+
+@media (min-width:960px){
+    .innovate-bg{
+    background-image: url('/Assets/december-hero-desktop.webp');
+    background-position: center;
+    background-size: cover;
+    }
+    .innovate-width{
+        max-width: 1310px;
+        margin-inline: auto;
+    }
+    .innovate{
+        width: 50%;
+    }
 }
 
 @media (min-width:1080px){
@@ -188,7 +401,25 @@ body{
         display: flex;
     }
     .azure{
-        margin-right: 20px;
+        margin: 0;
+    }
+    .azure-left .azure-text {
+        margin-left: 24px;
+    }
+    .azure-left{
+        transform: translateY(2px);
+    }
+    .azure-right {
+        transform: translate(10px, 3px);
+    }
+    .header-right-search{
+        display: none;
+    }
+    .input-search-container{
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1 1;
     }
     .input-search{
         display: flex;
@@ -197,7 +428,8 @@ body{
         background-color: #f8f9fa;
         padding: 7px 11px 6px 12px;
         border: 1px solid #747479;
-        border-radius: 5px;        
+        border-radius: 5px;   
+        margin-right: 26px;     
     }
     .input-search input{
         width: 100%;
@@ -212,10 +444,12 @@ body{
     .nav-menu{
         display: flex;
         align-items: center;
+        justify-content: space-around;
         list-style: none;
-        padding: 8px 0px;
-        gap: 15px;
-        margin-left: 16px;
+        margin-right: 9px;
+    }
+    .nav-menu li{
+        margin-inline: 6px;
     }
     .nav-menu li a{
         text-decoration: none;
@@ -224,14 +458,35 @@ body{
     }
     .nav-menu li:nth-child(4){
         background-color: #89c402;
+        border: 1px solid #6f9e02;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 20%;
+        padding: 9px 0;
+        border-radius: 4px;
     }
     .nav-menu li:nth-child(4) a{
         font-size: 12px;
-        padding: 9px;
+        line-height: 1;
+        font-weight: 600;
+        font-family: font-roman;
         text-align: center;
+        white-space: wrap;
+    }
+}
+@media (min-width:1092px){
+    .nav-menu{
+        width: 351px;
+    }
+    .nav-menu li:nth-child(4){
+        width: 26%;
+    }
+}
+
+@media (min-width:1280px){
+    .innovate{
+        padding: 72px 15px 280px 15px;
     }
 }
