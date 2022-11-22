@@ -306,7 +306,7 @@ body{
     font-weight: 600;
 }
 .see-products{
-    margin-top: 10%;
+    margin-top: 16%;
     text-align: center;
     width: 100%;
 }
@@ -336,6 +336,78 @@ body{
     background-color: black;
     padding: 3%;
     box-shadow: 0 10px 20px rgb(0, 0, 0, 0.14);
+}
+.azure-products-tab{
+    display: none;
+}
+.web-screenshot{
+    display: none;
+}
+.flex-card-right{
+    display: none;
+}
+.find{
+    padding: 60px 0;
+}
+.find h2{
+    font-size: 20px;
+    padding-inline: 15px;
+    text-align: center;
+    color: #1a1a1f;
+    line-height: 1.3;
+    letter-spacing: 0.04ch;
+}
+.find-logo{
+    margin-top: 10%;
+    text-align: center;
+}
+.logo-image{
+    height: fit-content;
+}
+.logo-image img{
+    height: auto;
+    width: 100%;
+}
+.logo-text{
+    padding: 24px;
+    background-color: #f8f9fa;
+}
+.logo-text p{
+    font-size: 20px;
+    line-height: 1.3;
+    color: #1a1a1f;
+    margin-bottom: 15%;
+}
+.logo-text a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #0062ad;
+    position: relative;
+}
+.logo-text a::after{
+    content: url(./Assets/right-arrow.svg);
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    top: 3px;
+    margin-left: 2px;
+}
+.caroussel{
+    text-align: center;
+}
+.caroussel button{
+    margin-right: 33px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #1a1a1f;
+    border: 1px solid black;
+}
+.caroussel button:first-child{
+    border: 1px solid #0078d4;
+    background-color: #0078d4;
+    height: 8px;
+    width: 8px;
 }
 
 @media (min-width:375px){
@@ -543,6 +615,99 @@ body{
     .overview a{
         width: 40%;
     }
+    .azure-products, .mobile-screenshot{
+        display: none;
+    }
+    .azure-products-tab{
+        display: block;
+        padding: 60px 15px;
+    }
+    .azure-products-tab h2{
+        text-align: left;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: font-roman;
+        color: #1a1a1f;
+        line-height: 1.2;
+        letter-spacing: 0.04ch;
+    }
+    .option-left, .tab-cards{
+        margin-top: 48px;
+    }
+    .flex-tab{
+        display: flex;
+    }
+    .flex-tab-left{
+        display: flex;
+    }
+    .option-left{
+        margin-right: 12px;
+        width: 74%;
+    }
+    .option-left ul{
+        list-style: none;
+        width: 100%;
+    }
+    .option-left ul li{
+        margin-bottom: 12px;
+        padding: 12px;
+        text-align: left;
+    }
+    .option-left ul li a{
+        text-decoration: none;
+        color: #4c4c51;
+        font-size: 16px;
+    }
+    .option-left ul li:first-child{
+        border-left: 4px solid #0062ad;
+    }
+    .option-left ul li:first-child a{
+        color: #1a1a1f;
+        font-weight: 600;
+    }
+    .tab-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 18px;
+    }
+    .tab-grid-card{
+        padding: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
+        background-color: white;
+        border-radius: 4px;
+    }
+    .tab-grid-card-top img{
+        width: 36px;
+        height: 36px;
+    }
+    .tab-grid-card-top p{
+        margin-block: 24px;
+        font-size: 16px;
+        font-family: font-roman;
+        text-align: center;
+    }
+    .tab-grid-card-bottom a{
+        text-decoration: none;
+        color: #0062ad;
+        font-size: 14px;
+        line-height: 1.3;
+        font-weight: 600;
+    }
+    .tab-see-product{
+        text-align: left;
+        margin-left: 5px;
+    }
+    .tab-see-product a{
+        color: #0062ad;
+    }
+    .find-logo{
+        margin-top: 12px;
+    }
 }
 
 @media (min-width:769px){
@@ -575,6 +740,56 @@ body{
     }
     .innovate{
         width: 50%;
+    }
+    .azure-products-tab{
+        overflow: hidden;
+    }
+    .flex-tab{
+        max-width: 1310px;
+        margin-inline: auto;
+    }
+    .flex-tab-left .option-left ul li{
+        white-space: nowrap;
+    }
+    .tab-cards{
+        column-gap: 30px;
+        row-gap: 24px;
+        margin-right: 50px;
+        grid-template-columns: repeat(3, 15vw);
+    }
+    .flex-card-right{
+        display: block;
+    }
+    .web-screenshot{
+        margin-top: 48px;
+        border-radius: 12px;
+        background-color: black;
+        padding: 27px 27px;
+        display: flex;
+        flex-direction: row;
+    }
+    .web-screenshot img{
+        height: 100%;
+    }
+    .view-azure{
+        max-width: 22%;
+        padding: 10px 12px 0 40px;
+        position: relative;
+    }
+    .view-azure::before{
+        content: '\f177';
+        position: absolute;
+        font: var(--fa-font-solid);
+        left: 14px;
+        bottom: 14px;
+        color: #0062ad;
+    }
+    .view-azure a{
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        color: #0062ad;
+        text-decoration: none;
     }
 }
 
