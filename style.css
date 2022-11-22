@@ -380,6 +380,7 @@ body{
 }
 .logo-text a{
     font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
     color: #0062ad;
     position: relative;
@@ -409,6 +410,16 @@ body{
     height: 8px;
     width: 8px;
 }
+.logo-image-text-width{
+    display: none;
+}
+.nhs-desktop{
+    display: none;
+}
+.logo-list{
+    display: none;
+}
+
 
 @media (min-width:375px){
     .multicloud-header h2{
@@ -708,6 +719,15 @@ body{
     .find-logo{
         margin-top: 12px;
     }
+    .logo-text p{
+        margin-bottom: 24px;
+    }
+    .nhs-mobile{
+        display: none;
+    }
+    .nhs-desktop{
+        display: block;
+    }
 }
 
 @media (min-width:769px){
@@ -790,6 +810,98 @@ body{
         font-size: 14px;
         color: #0062ad;
         text-decoration: none;
+    }
+    .find h2{
+        font-size: 24px;
+    }
+    .find-logo{
+        display: none;
+    }
+    .maxwidth{
+        position: absolute;
+        bottom: 60px;
+        width: 100%;
+    }
+    .logo-image{
+        position: relative;
+    }
+    .logo-image img{
+        min-height: 600px;
+        max-height: 700px;
+        object-fit: cover;
+    }
+    .logo-image-text-width{
+        display: block;
+        max-width: 1310px;
+        margin-inline: auto;
+    }
+    .logo-image-text{
+        width: 48%;
+        max-width: 655px;
+        padding: 24px;
+        background-color: rgba(26, 26, 31, 0.94);
+        margin-left: 15px;
+        color: white;
+        border-radius: 4px;
+    }
+    .logo-image-text p{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    .logo-image-text a{
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        position: relative;
+    }
+    .logo-image-text a::after{
+        content: '\f054';
+        font: var(--fa-font-solid);
+        position: absolute;
+        font-size: 12px;
+        top: 5px;
+        margin-left: 5px;
+    }
+    .logo-text, .caroussel{
+        display: none;
+    }
+    .logo-list{
+        display: block;
+        margin-top: 24px;
+        padding-inline: 15px;
+        max-width: 1310px;
+        margin-inline: auto;
+    }
+    .logo-list ul{
+        display: flex;
+        list-style: none;
+    }
+    .logo-list ul li{
+        margin: 12px;
+        padding: 12px;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .selected{
+        position: relative;
+    }
+    .logo-list ul li img{
+        max-height: calc(100% - 1px);
+        max-width: calc(100% - 1px);
+        filter: grayscale(100%);
+    }
+    .logo-list ul li:first-child img{
+        filter: grayscale(0%);
+    }
+    .selected::after{
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: #0078d4;
+        position: absolute;
+        bottom: 5px;
     }
 }
 
