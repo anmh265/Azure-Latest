@@ -839,6 +839,7 @@ body{
         grid-template-columns: repeat(3, 1fr);
         line-height: 1.5;
         margin-top: 36px;
+        overflow: hidden;
     }
     .happening h2{
         font-size: 24px;
