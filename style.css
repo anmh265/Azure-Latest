@@ -419,7 +419,91 @@ body{
 .logo-list{
     display: none;
 }
-
+.accelerate-bg{
+    padding: 60px 15px;
+    background-color: #f8f9fa;
+}
+.accelerate{
+    padding: 36px;
+    text-align: center;
+}
+.accelerate img{
+    height: auto;
+    max-width: 100%;
+}
+.accelerate-text{
+    margin-top: 15%;
+}
+.accelerate-text h2{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1a1a1f;
+    font-family: font-roman;
+    letter-spacing: 0.04ch;
+}
+.accelerate-btn{
+    margin-top: 10%;
+}
+.accelerate-btn a{
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0062ad;
+    border: 1px solid #0062ad;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02ch;
+}
+.happening{
+    padding: 60px 10px;
+    max-width: 1310px;
+    margin-inline: auto;
+}
+.happening h2{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: font-roman;
+    line-height: 1.2;
+    color: #1a1a1f;
+    text-align: center;
+}
+.happening-grid{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(6, 75vw);
+    column-gap: 30px;
+    row-gap: 24px;
+    overflow-x: scroll;
+    padding: 12px 6px 36px;
+}
+.happening-grid-card{
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
+    border-radius: 6px;
+    overflow: hidden;
+   background-color: white;
+}
+.happening-grid-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.happening-grid-text{
+    padding: 12px;
+}
+.happening-grid-text .head{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: font-roman;
+    margin-bottom: 12px;
+}
+.happening-grid-text .content{
+    font-size: 16px;
+}
 
 @media (min-width:375px){
     .multicloud-header h2{
@@ -728,6 +812,60 @@ body{
     .nhs-desktop{
         display: block;
     }
+    .accelerate{
+        display: flex;
+        align-items: center;
+        padding: 36px;
+        max-width: 1310px;
+        margin-inline: auto;
+        padding: 0;
+    }
+    .accelerate img{
+        width: 41.6%;
+    }
+    .accelerate-text{
+        margin-top: 0;
+        text-align: left;
+        margin-left: 15px;
+    }
+    .accelerate-btn{
+        margin-top: 36px;
+    }
+    .accelerate-btn a{
+        width: auto;
+        display: inline-block;
+    }
+    .happening-grid{
+        grid-template-columns: repeat(3, 1fr);
+        line-height: 1.5;
+        margin-top: 36px;
+    }
+    .happening h2{
+        font-size: 24px;
+        letter-spacing: 0.04ch;
+    }
+    .extend-grid-one, .extend-grid-two{
+        position: relative;
+    }
+    .extend-grid-one img, .extend-grid-two img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        object-position: 0 0;
+        z-index: 0;
+    }
+    .extend-grid-one .content, .extend-grid-two .content{
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 25px;
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width:769px){
@@ -902,6 +1040,18 @@ body{
         background-color: #0078d4;
         position: absolute;
         bottom: 5px;
+    }
+    .happening-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .extend-grid-one{
+        grid-column: 3/span 2;
+    }
+    .extend-grid-two{
+        grid-column: 2/span 2;
+    }
+    .extend-grid-one .content, .extend-grid-two .content{
+        font-size: 24px;
     }
 }
 
