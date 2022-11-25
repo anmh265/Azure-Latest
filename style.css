@@ -567,6 +567,54 @@ body{
 .desktop-video{
     display: none;
 }
+.building{
+    padding: 60px 15px;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 24px;
+}
+.building-card{
+    position: relative;
+    padding: 24px 24px 24px 84px;
+    border-radius: 6px;
+    color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+.building-card-text p{
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: font-roman;
+    font-weight: 600;
+    letter-spacing: 0.04ch;
+}
+.dark-blue{
+    background-color: #243a5e;
+}
+.black{
+    background-color: #242429;
+}
+.light-blue{
+    background-color: #0062ad;
+}
+.building-card-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.building-card-img img{
+    width: 36px;
+    height: 36px;
+}
+.text-content{
+    display: none;
+}
+
 
 @media (min-width:375px){
     .multicloud-header h2{
@@ -944,6 +992,31 @@ body{
     .video-text .video-btn{
         margin-top: 36px;
     }
+    .building-card{
+        padding: 24px;
+    }
+    .building-card-img{
+        position: static;
+    }
+    .building-card-img img{
+        height: 48px;
+        width: 48px;
+    }
+    .building-card-img{
+        justify-content: flex-start;
+    }
+    .building-card-text{
+        margin-top: 24px;
+    }
+    .building-card-text .text-content{
+        display: block;
+        font-size: 16px;
+        margin-top: 12px;
+        font-family: font-roman;
+        font-weight: 400;
+        letter-spacing: 0ch;
+    }
+
 }
 
 @media (min-width:769px){
@@ -1220,6 +1293,11 @@ body{
         font-size: 12px;
         top: 5px;
         margin-left: 5px;
+    }
+    .building{
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1310px;
+        margin-inline: auto;
     }
 
 }
