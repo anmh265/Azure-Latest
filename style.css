@@ -12,6 +12,7 @@
 @font-face {
     font-family: font-roman;
     src: url('https://azurecomcdn.azureedge.net/cvt-63c12051016796d92bcf4bc20b4881057475e6dfa4937c29c9e16054814ab47d/fonts/segoe-ui/variable/SegoeUI-Roman-VF_web.woff2');
+    
 }
 
 body{
@@ -103,6 +104,7 @@ body{
     margin-top: 30px;
     font-size: 18px;
     line-height: 1.3;
+    text-align: center;
 }
 .innovate-buttons{
     margin-top: 30px;
@@ -324,6 +326,7 @@ body{
     width: 12px;
     bottom: 1px;
     margin-left: 5px;
+    transition: all 0.3s ease-in-out;
 }
 .mobile-screenshot{
     margin-top: 10%;
@@ -428,12 +431,16 @@ body{
     padding: 36px;
     text-align: center;
 }
+.accelerate-img{
+    padding-inline: 12px;
+}
 .accelerate img{
     height: auto;
     max-width: 100%;
 }
 .accelerate-text{
-    margin-top: 15%;
+    margin-top: 12%;
+    padding-inline: 15px;
 }
 .accelerate-text h2{
     font-size: 36px;
@@ -472,6 +479,7 @@ body{
     line-height: 1.2;
     color: #1a1a1f;
     text-align: center;
+    letter-spacing: 0.02ch;
 }
 .happening-grid{
     margin-top: 10%;
@@ -486,7 +494,11 @@ body{
     box-shadow: 0 2px 5px rgb(0, 0, 0, 0.14);
     border-radius: 6px;
     overflow: hidden;
-   background-color: white;
+    background-color: white;
+    cursor: pointer;
+}
+.happening-grid-card:hover{
+    box-shadow: 0 2px 5px 2px rgb(0, 0, 0, 0.14);
 }
 .happening-grid-img img{
     width: 100%;
@@ -504,6 +516,11 @@ body{
 }
 .happening-grid-text .content{
     font-size: 16px;
+    line-height: 1.5;
+    color: #2e2e33;
+}
+.happening-grid-card:hover .content{
+    text-decoration: underline;
 }
 .video-img{
     position: relative;
@@ -576,7 +593,7 @@ body{
 }
 .building-card{
     position: relative;
-    padding: 24px 24px 24px 84px;
+    padding: 24px 24px 24px 80px;
     border-radius: 6px;
     color: #f8f9fa;
     display: flex;
@@ -587,7 +604,7 @@ body{
     line-height: 1.3;
     font-family: font-roman;
     font-weight: 600;
-    letter-spacing: 0.04ch;
+    letter-spacing: 0.03ch;
 }
 .dark-blue{
     background-color: #243a5e;
@@ -652,6 +669,9 @@ body{
 .app-link{
     margin-left: 12px;
 }
+.azure-logo-text:hover .app-link{
+    text-decoration: underline;
+}
 .social-btns{
     margin-top: 12px;
     margin-left: 12px;
@@ -697,6 +717,7 @@ body{
     font: var(--fa-font-solid);
     color: #4c4c51;
     font-size: 13px;
+    transform: translateY(3px);
 }
 .web-footer-mid{
     display: none;
@@ -745,6 +766,9 @@ body{
     font-size: 12px;
     padding-block: 2px;
     color: #1a1a1f;
+}
+.footer-nav-list ul li a:hover{
+    text-decoration: underline;
 }
 .footer-nav-list span{
     font-size: 12px;
@@ -830,11 +854,12 @@ body{
     .azure-right ul li button{
         border: none;
         background-color: transparent;
-        padding: 16px 8px;
+        padding: 16px 8px 20px;
         font-size: 13px;
         font-family: font-roman;
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
     .azure-right ul li button::after{
         content: '\f078';
@@ -842,6 +867,9 @@ body{
         font-size: 9px;
         padding-left: 3px;
         padding-top: 1px;
+    }
+    .azure-right ul li button:hover{
+        text-decoration: underline;
     }
     .header-right-search{
         display: flex;
@@ -883,7 +911,7 @@ body{
         margin-top: 36px;
     }
     .multicloud-header h2{
-        font-size: 20px;
+        font-size: 24px;
     }
     .multicloud-cards{
         display: none;
@@ -908,6 +936,16 @@ body{
         position: relative;
         padding: 24px;
     }
+    .multicloud-cards-webtop-text, .grid-card{
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .multicloud-cards-webtop-text:hover, .grid-card:hover{
+        box-shadow: 0 5px 5px rgb(0, 0, 0, 0.14);
+    }
+    .multicloud-cards-webtop-text:hover .multicloud-cards-webtop-pos h2{
+        text-decoration: underline;
+    }
     .multicloud-cards-webtop-pos{
         position: absolute;
         bottom: 7%;
@@ -930,6 +968,8 @@ body{
     .net-desktop-text h2, .devbox-desktop-text h2{
         text-align: left;
         color: #0078d4;
+        font-size: 20px;
+        line-height: 1.3;
     }
     .net-desktop-text{
         padding-left: 12px;
@@ -955,6 +995,12 @@ body{
         height: 100%;
         object-fit: cover;
     }
+    .upgrade-card-desktop:hover .net-desktop-text h2{
+        text-decoration: underline;
+    }
+    .devbox-card-desktop:hover .devbox-desktop-text h2{
+        text-decoration: underline;
+    }
     .overview{
         width: 33.33%;
         display: flex;
@@ -975,13 +1021,19 @@ body{
     }
     .overview a{
         width: 40%;
+        transition: all 0.2s ease-in-out;
+    }
+    .overview a:hover{
+        background-color: #0078d4;
+        color: white;
+        text-decoration: underline;
     }
     .azure-products, .mobile-screenshot{
         display: none;
     }
     .azure-products-tab{
         display: block;
-        padding: 60px 15px;
+        padding: 60px 0px;
     }
     .azure-products-tab h2{
         text-align: left;
@@ -991,19 +1043,25 @@ body{
         color: #1a1a1f;
         line-height: 1.2;
         letter-spacing: 0.04ch;
+        max-width: 1310px;
+        margin-inline: auto;
+        padding-inline: 15px;
     }
     .option-left, .tab-cards{
         margin-top: 48px;
     }
     .flex-tab{
         display: flex;
+        gap: 10px;
+        padding-left: 5px;
     }
     .flex-tab-left{
         display: flex;
     }
     .option-left{
         margin-right: 12px;
-        width: 74%;
+        width: 70%;
+        padding-left: 5px;
     }
     .option-left ul{
         list-style: none;
@@ -1030,6 +1088,7 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 18px;
+        padding-right: 15px;
     }
     .tab-grid-card{
         padding: 24px;
@@ -1051,6 +1110,7 @@ body{
         font-size: 16px;
         font-family: font-roman;
         text-align: center;
+        line-height: 1.5;
     }
     .tab-grid-card-bottom a{
         text-decoration: none;
@@ -1065,12 +1125,16 @@ body{
     }
     .tab-see-product a{
         color: #0062ad;
+        transition: all 0.3s ease-in-out;
+    }
+    .find h2{
+        font-size: 24px;
     }
     .find-logo{
         margin-top: 12px;
     }
     .logo-text p{
-        margin-bottom: 24px;
+        margin-bottom: 35px;
     }
     .nhs-mobile{
         display: none;
@@ -1084,15 +1148,18 @@ body{
         padding: 36px;
         max-width: 1310px;
         margin-inline: auto;
-        padding: 0;
     }
-    .accelerate img{
+    .accelerate-img{
         width: 41.6%;
+    }
+    .accelerate-img img{
+        width: 100%;
+        height: auto;
     }
     .accelerate-text{
         margin-top: 0;
         text-align: left;
-        margin-left: 15px;
+        width: 54%;
     }
     .accelerate-btn{
         margin-top: 36px;
@@ -1100,16 +1167,23 @@ body{
     .accelerate-btn a{
         width: auto;
         display: inline-block;
+        transition: background-color, color 0.2s ease-in-out;
+    }
+    .accelerate-btn a:hover{
+        background-color: #0062ad;
+        color: white;
+        text-decoration: underline;
     }
     .happening-grid{
         grid-template-columns: repeat(3, 1fr);
         line-height: 1.5;
         margin-top: 36px;
         overflow: hidden;
+        padding-top: 0;
     }
     .happening h2{
         font-size: 24px;
-        letter-spacing: 0.04ch;
+        letter-spacing: 0.02ch;
     }
     .extend-grid-one, .extend-grid-two{
         position: relative;
@@ -1137,18 +1211,17 @@ body{
         display: none;
     }
     .video-img .desktop-video{
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
-        min-height: 600px;
-        max-height: 700px;
     }
     .video-text .video-btn{
         margin-top: 36px;
     }
     .building-card{
         padding: 24px;
+        cursor: pointer;
     }
     .building-card-img{
         position: static;
@@ -1175,6 +1248,9 @@ body{
         letter-spacing: 0ch;
         line-height: 1.5;
     }
+    .building-card:hover .text-heading{
+        text-decoration: underline;
+    }
     .social-btns{
         margin-left: 36px;
     }
@@ -1186,20 +1262,34 @@ body{
         text-align: left;
         width: 75%;
     }
+    .innovate p{
+        text-align: left;
+    }
     .innovate-buttons{
         flex-direction: row;
     }
     .innovate-buttons button{
         width: auto;
         line-height: 1.5;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
     }
     .innovate-buttons .blue{
         margin-top: 12px;
         margin-right: 24px;
     }
+    .innovate-buttons .blue:hover{
+        text-decoration: underline;
+    }
+    .innovate-buttons .free:hover{
+        text-decoration: underline;
+        color: white;
+        background-color: black;
+    }
 }
 
 @media (min-width:960px){
+
     .innovate-bg{
     background-image: url('/Assets/december-hero-desktop.webp');
     background-position: center;
@@ -1218,21 +1308,43 @@ body{
     .azure-products-tab{
         overflow: hidden;
     }
-    .flex-tab{
+    .flex-tab-width{
         max-width: 1310px;
         margin-inline: auto;
     }
-    .flex-tab-left .option-left ul li{
+    /* .flex-tab-left .option-left ul li{
         white-space: nowrap;
+    } */
+    .option-left{
+        min-width: 28%;
+        margin-right: 0;
+    }
+    .option-left ul li a:hover{
+        text-decoration: underline;
+        color: #0062ad;
+    }
+    .see-products a:hover::after{
+        transform: translateX(5px);
     }
     .tab-cards{
         column-gap: 30px;
         row-gap: 24px;
-        margin-right: 50px;
+        margin-right: 7px;
+        margin-left: 10px;
         grid-template-columns: repeat(3, 15vw);
+    }
+    .tab-grid-card{
+        cursor: pointer;
+    }
+    .tab-grid-card:hover{
+        box-shadow: 0 2px 10px rgb(0, 0, 0, 0.14);
+    }
+    .tab-grid-card:hover .tab-grid-card-bottom a{
+        text-decoration: underline;
     }
     .flex-card-right{
         display: block;
+        margin-left: 11%;
     }
     .web-screenshot{
         margin-top: 48px;
@@ -1241,6 +1353,7 @@ body{
         padding: 27px 27px;
         display: flex;
         flex-direction: row;
+        /* transform: translateX(31px)} */
     }
     .web-screenshot img{
         height: 100%;
@@ -1315,6 +1428,10 @@ body{
         font-size: 12px;
         top: 5px;
         margin-left: 5px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .logo-image-text a:hover::after{
+        transform: translateX(3px);
     }
     .logo-text, .caroussel{
         display: none;
@@ -1328,15 +1445,23 @@ body{
     }
     .logo-list ul{
         display: flex;
+        align-items: center;
+        justify-content: center;
         list-style: none;
     }
     .logo-list ul li{
         margin: 12px;
         padding: 12px;
         width: 25%;
+        max-width: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .logo-list ul li:hover{
+        background-color: #e8e8f0;
     }
     .selected{
         position: relative;
@@ -1368,15 +1493,21 @@ body{
     }
     .extend-grid-one .content, .extend-grid-two .content{
         font-size: 24px;
+        letter-spacing: 0.04ch;
     }
     .video-text, .play-btn, .video-img::after{
         display: none;
     }
+    .desktop-video{
+        min-height: 600px;
+        max-height: 700px;
+        object-fit: cover;
+    }
     .desktop-video-position{
         position: absolute;
-        top: 50px;
+        top: 60px;
+        right: 0;
         left: 15px;
-        width: 100%;
         display: block;
     }
     .desktop-video-width{
@@ -1385,7 +1516,7 @@ body{
         width: 100%;
     }
     .desktop-content{
-        width: 57%;
+        max-width: 58%;
         color: white;
         padding: 24px;
         background-color: rgba(26, 26, 31, 0.94);
@@ -1410,7 +1541,13 @@ body{
         display: inline-block;
         align-items: center;
         border-radius: 4px;
-        width: auto;
+        cursor: pointer;
+    }
+    .desktop-content-links button:hover{
+        background-color: #0062ad;
+    }
+    .desktop-content-links button:hover .watch-story{
+        text-decoration: underline;
     }
     .desktop-content-links button .desktop-play-btn{
         height: 26px;
@@ -1450,6 +1587,7 @@ body{
         color: rgb(248, 249, 250);
         letter-spacing: 0.02ch;
         position: relative;
+        cursor: pointer;
     }
     .developer-story::after{
         content: '\f054';
@@ -1458,12 +1596,17 @@ body{
         font-size: 12px;
         top: 5px;
         margin-left: 5px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .developer-story:hover::after{
+        transform: translateX(3px);
     }
     .building{
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 1310px;
         margin-inline: auto;
     }
+
     .mobile-footer-mid{
         display: none;
     }
@@ -1479,12 +1622,14 @@ body{
         font-family: font-roman;
         font-weight: 600;
         margin-bottom: 9px;
+        letter-spacing: 0.02ch;
     }
     .web-footer-card ul{
         list-style: none;
     }
     .web-footer-card ul li{
         margin-top: 12px;
+        padding-bottom: 3px;
     }
     .web-footer-card ul li a{
         text-decoration: none;
@@ -1493,6 +1638,9 @@ body{
         font-size: 12px;
         line-height: 1.5;
     }
+    .web-footer-card ul li a:hover{
+        text-decoration: underline;
+    }
     .footer-bottom{
         flex-direction: row;
         justify-content: space-between;
@@ -1500,6 +1648,12 @@ body{
     .footer-nav-list{
         max-width: 65%;
     }
+}
+@media screen and (min-width:1024px) {
+    .option-left{
+        min-width: 29%;
+    }
+
 }
 
 @media (min-width:1075px){
@@ -1525,7 +1679,7 @@ body{
         transform: translateY(2px);
     }
     .azure-right {
-        transform: translate(10px, 3px);
+        transform: translate(12px, 3px);
     }
     .header-right-search{
         display: none;
@@ -1534,7 +1688,7 @@ body{
         display: flex !important;
         align-items: center;
         justify-content: flex-end;
-        transform: translate(9px, 2px);
+        transform: translate(7px, 2px);
     }
     .input-search{
         display: flex;
@@ -1544,7 +1698,8 @@ body{
         padding: 7px 11px 6px 12px;
         border: 1px solid #747479;
         border-radius: 5px;   
-        margin-right: 26px;     
+        margin-right: 26px;   
+        transform: translate(-3px, 0px);  
     }
     .input-search input{
         width: 100%;
@@ -1565,6 +1720,13 @@ body{
     }
     .nav-menu li{
         margin-inline: 6px;
+    }
+    .nav-menu li:first-child{
+        margin-right: 8px;
+        transform: translate(-4px, -1px);
+    }
+    .nav-menu li:nth-child(2){
+        transform: translate(-2px, -1px);
     }
     .nav-menu li a{
         text-decoration: none;
@@ -1590,6 +1752,9 @@ body{
         text-align: center;
         white-space: wrap;
     }
+    .nav-menu li a:hover{
+        text-decoration: underline;
+    }
 }
 @media (min-width:1092px){
     .nav-menu{
@@ -1607,10 +1772,26 @@ body{
     .innovate{
         padding: 72px 15px 280px 15px;
     }
+    .happening-grid-text p{
+        margin-bottom: 35px;
+    }
+    .flex-card-right{
+        margin-left: 12.5%;
+    }
 }
 
 @media (min-width:1844px){
     .overview a{
         width: 35%;
+    }
+    .option-left{
+        min-width: 21%;
+    }
+    .flex-card-right{
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .flex-card-right:hover{
+        transform: translateX(-35px);
     }
 }
